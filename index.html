@@ -1,33 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stefan Cimpan | Software Engineer Student</title>
+    
     <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <h1>Stefan Cimpan</h1>
-        <p>Software Engineer</p>
-        <img src="photo_5965478449525148165_y.jpg" width = "30%">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Stefan Cimpan</a>
+                <span>/ Software Engineer Student</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section class="hero">
-            <h2>Building Scalable and Efficient Software Solutions</h2>
-            <p>Passionate about developing high-performance applications.</p>
+        <section id="hero" class="container">
+            <div class="hero-content">
+                <h1>Building Scalable and Efficient Software Solutions</h1>
+                <p>Sunt un student pasionat de inginerie software, dedicat dezvoltării aplicațiilor performante și soluțiilor inovatoare.</p>
+                <a href="projects.html" class="cta-button">Vezi Proiectele Mele</a>
+            </div>
+            <div class="hero-image">
+                <img src="photo_5965478449525148165_y.jpg" alt="Portretul lui Stefan Cimpan">
+            </div>
         </section>
+
+        <section id="featured-projects">
+            <div class="container">
+                <h2 class="section-title">Proiecte Recomandate</h2>
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x250.png?text=Imagine+Proiect+1" alt="Previzualizare Proiect 1">
+                        <div class="card-content">
+                            <h3>Numele Proiectului 1</h3>
+                            <p>O scurtă descriere a proiectului, tehnologiile folosite și provocările întâmpinate. (de ex. Java, Spring, React)</p>
+                            <a href="#" class="button-link">Vezi Detalii</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/400x250.png?text=Imagine+Proiect+2" alt="Previzualizare Proiect 2">
+                        <div class="card-content">
+                            <h3>Numele Proiectului 2</h3>
+                            <p>O scurtă descriere a proiectului, tehnologiile folosite și provocările întâmpinate. (de ex. Python, Django, SQL)</p>
+                            <a href="#" class="button-link">Vezi Detalii</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
+
     <footer>
-        <p>&copy; 2025 Stefan Cimpan. All rights reserved.</p>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Stefan Cimpan. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
