@@ -1,276 +1,362 @@
-/* --- Setări Globale și Variabile --- */
 :root {
-    --primary-color: #007BFF;  /* Un albastru vibrant */
-    --primary-hover: #0056b3;
-    --dark-color: #22252a;
-    --light-color: #f4f4f4;
-    --text-color: #333;
-    --white-color: #ffffff;
-    --font-family: 'Montserrat', sans-serif;
+    --bg-color: #0A0A0A; /* Fundal Foarte Intunecat */
+    --text-color: #EAEAEA; /* Text Deschis */
+    --accent-color: #14FFEC; /* Neon Cyan */
+    --secondary-bg: #1B1B1B; /* Fundal Secundar */
+    --border-color: #333333;
+    --font-mono: 'Fira Code', monospace;
 }
 
+/* Reset de Bază și Global */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-family);
-    line-height: 1.6;
-    background-color: var(--white-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
+    font-family: var(--font-mono);
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 .container {
-    max-width: 1100px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-/* --- Stiluri Header și Navigație --- */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed var(--border-color);
+    margin: 4rem 0;
+}
+
+/* Navigare (Header) */
 header {
-    background: var(--white-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 1.2rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
-header .container {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo a {
-    color: var(--text-color);
+.logo {
     font-size: 1.5rem;
-    font-weight: 700;
-    text-decoration: none;
+    color: var(--accent-color);
 }
 
-header .logo span {
-    font-size: 0.9rem;
-    color: #777;
-    margin-left: 5px;
-}
-
-header nav ul {
+nav ul {
     list-style: none;
     display: flex;
 }
 
-header nav ul li {
-    margin-left: 25px;
+nav ul li {
+    margin-left: 2rem;
 }
 
-header nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 700;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+nav ul a {
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
-header nav ul li a:hover,
-header nav ul li a.active {
-    color: var(--primary-color);
-}
-
-/* --- Secțiunea Hero --- */
-#hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 5rem 0;
-    background-color: var(--light-color);
-}
-
-#hero .hero-content {
-    flex: 2;
-}
-
-#hero .hero-content h1 {
-    font-size: 2.8rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    color: var(--dark-color);
-}
-
-#hero .hero-content p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-#hero .hero-image {
-    flex: 1;
-    text-align: center;
-}
-
-#hero .hero-image img {
-    max-width: 300px;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 50%; /* Face poza rotundă */
-    border: 5px solid var(--primary-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: var(--primary-hover);
-}
-
-/* --- Secțiunea Proiecte Recomandate --- */
-#featured-projects {
+/* Secțiunile Principale */
+.content-section {
     padding: 4rem 0;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    color: var(--dark-color);
-    margin-bottom: 3rem;
-    position: relative;
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 
-/* Linie decorativă sub titlu */
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--primary-color);
-    margin: 10px auto 0;
+/* Stil Neon */
+.neon-text {
+    color: var(--accent-color);
+    text-shadow: 0 0 5px rgba(20, 255, 236, 0.6);
 }
 
+/* Secțiunea Hero */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.typing-text {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    border-right: 2px solid var(--accent-color); /* Cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+}
+/* Animație Typing și Cursor (pentru un efect realist) */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent-color); }
+}
+
+.cta-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.cta-primary, .cta-secondary {
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+}
+
+.cta-primary {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.cta-primary:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.cta-secondary {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+.cta-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Secțiunea Despre Mine */
+#about ul {
+    list-style-type: '>';
+    margin-left: 1.5rem;
+    padding-left: 0.5rem;
+}
+#about ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Secțiunea Competențe */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    align-items: stretch; /* (Valoarea implicită, dar e bine de confirmat) */
+}
+
+.skill-category {
+    padding: 1.5rem;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.skill-category h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.skill-tags {
+    line-height: 2;
+    color: var(--text-color);
+}
+
+/* Secțiunea Proiecte */
 .projects-grid {
     display: grid;
-    /* Creează 2 coloane pe desktop, 1 pe mobil */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
 .project-card {
-    background: var(--white-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Pentru a rotunji colțurile imaginii */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    /* 💥 ADAUGĂ FLEXBOX AICI 💥 */
+    display: flex;          /* Activează Flexbox */
+    flex-direction: column; /* Organizează conținutul pe verticală */
+    height: 100%;
 }
 
 .project-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(20, 255, 236, 0.4);
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.project-card .card-content {
-    padding: 1.5rem;
 }
 
 .project-card h3 {
-    font-size: 1.4rem;
-    color: var(--dark-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
-.project-card p {
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-}
-
-.button-link {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 700;
-}
-
-.button-link:hover {
-    text-decoration: underline;
-}
-
-/* --- Footer --- */
-footer {
-    background-color: var(--dark-color);
-    color: var(--white-color);
-    text-align: center;
-    padding: 2.5rem 0;
-    margin-top: 3rem;
-}
-
-.social-links {
-    margin-bottom: 1rem;
-}
-
-.social-links a {
-    color: var(--white-color);
-    font-size: 1.8rem;
-    margin: 0 12px;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-}
-
-footer p {
+.tech-used {
+    margin-top: 0.75rem;
     font-size: 0.9rem;
+    color: #999;
 }
 
-/* --- Media Queries pentru Responsivitate --- */
-
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    #hero {
-        flex-direction: column-reverse; /* Pune imaginea deasupra pe mobil */
-        text-align: center;
-        padding: 3rem 0;
-    }
-
-    #hero .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    #hero .hero-image img {
-        max-width: 250px;
-        height: 250px;
-    }
+.project-links {
+    margin-top: auto;
 }
 
-@media (max-width: 480px) {
-    header nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
+.link-btn {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
 
-    header nav ul li {
-        margin-left: 10px;
-    }
+.link-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Secțiunea Contact */
+.contact-links {
+    margin-top: 2rem;
+}
+
+.neon-link {
+    background: transparent;
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--border-color);
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+}
+
+/* CONTAINERUL PENTRU AMBELE IMAGINI */
+.image-gallery-left {
+    margin-right: 4rem; /* Spațiu între imaginile din stânga și textul din dreapta */
+    max-width: 320px;   /* Lățimea maximă a blocului de imagini */ 
+    margin-left: 2rem; /* Ajustează valoarea (ex: 2rem) după cum dorești */
+}
+
+/* STIL PENTRU FIECARE IMAGINE INDIVIDUALĂ DIN GALERIE */
+.about-image {
+    display: block;    /* Asigură că fiecare imagine e pe o linie nouă în containerul ei */
+    max-width: 100%;   /* Fiecare imagine ocupă lățimea maximă a containerului '.image-gallery-left' */
+    height: auto;
+    margin-bottom: 1.5rem; /* Spațiu între cele două imagini */
+}
+
+/* ULTIMA IMAGINE DIN GALERIE NU VA MAI AVEA MARGIN-BOTTOM */
+.image-gallery-left img:last-child {
+    margin-bottom: 0; 
+}
+
+
+/* CLASA CLEARFIX RĂMÂNE PE <section id="about"> */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+/* (Șterge vechile clase .jurnal-image și .profile-image-bottom dacă nu mai sunt folosite) */
+
+/* style.css */
+
+/* Stilizarea generală a titlurilor H2 */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    /* 💥 ADAUGĂ ACEASTĂ LINIE PENTRU CENTRARE: 💥 */
+    text-align: center; 
+}
+
+.main-content-wrapper {
+    display: flex;             /* Activează Flexbox */
+    align-items: center;       /* 💥 Centrează conținutul pe verticală 💥 */
+    /* Această proprietate aliniază blocul de imagini și blocul de text unul lângă altul,
+       centrându-le pe axa verticală, bazat pe înălțimea celui mai înalt bloc. */
+}
+
+.text-content {
+    /* Asigură ca textul să ocupe spațiul rămas */
+    flex-grow: 1; /* Permite textului să ocupe tot spațiul rămas */
+}
+
+/* Deoarece am eliminat float-ul, clasa clearfix nu mai este necesară pe secțiune. */
+
+/* style.css */
+
+/* Vizează toate paragrafele și elementele din listă din secțiunea Despre Mine */
+#about p, #about ul, #about h3 {
+    margin-right: 5%; /* Adaugă 5% spațiu în dreapta (ajustează % după nevoie) */
+    
+    /* Mărește spațiul de sub fiecare paragraf la 2rem */
+    margin-bottom: 2rem;
+}
+
+/* style.css */
+
+/* Vizează toate paragrafele din secțiunea #about */
+#about p {
+    /* Mărește dimensiunea textului (de la 1rem la 1.1rem sau 1.2rem) */
+    font-size: 1.4rem; /* Ajustează această valoare după preferință */
+    
+    /* Păstrează spațierea pentru lizibilitate */
+    line-height: 1.8;
+}
+
+/* Aplică aceeași dimensiune și elementelor din listă (dacă ai listă) */
+#about ul li {
+    font-size: 1.15rem; /* Păstrează consistența cu paragrafele */
+}
+
+/* 1. CONTAINERUL PRINCIPAL FLEXBOX (Părintele imaginilor ȘI al textului) */
+.content-flex-wrapper {
+    display: flex;         /* Activează Flexbox (coloană lângă coloană) */
+    align-items: center;   /* 💥 CENTREAZĂ pe verticală (sus-jos)! 💥 */
+    gap: 4rem;             /* Spațiu între blocul de imagini și blocul de text */
+    margin-top: 3rem;      /* Adaugă spațiu între titlul H2 și conținut */
 }

@@ -1,33 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stefan Cimpan | Software Engineer Student</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Stefan Cîmpan | Dev C++ & Python</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <h1>Stefan Cimpan</h1>
-        <p>Software Engineer</p>
-        <img src="photo_5965478449525148165_y.jpg" width = "30%">
-        <nav>
+        <nav class="container">
+            <div class="logo"><a href="index.html">Stefan Cîmpan:/></a></div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="despre_mine.html">Despre</a></li>
+                <li><a href="#skills">Competențe</a></li>
+                <li><a href="#portfolio">Portofoliu</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="hero">
-            <h2>Building Scalable and Efficient Software Solutions</h2>
-            <p>Passionate about developing high-performance applications.</p>
+
+    <main class="container">
+        
+        <section id="hero" class="hero-section">
+            <h1 class="neon-text">Salut, eu sunt <a href="index.html">Stefan Cîmpan</a>.</h1>
+            <p class="typing-text">> Student la CS & Dev C++/Python.</p>
+            <div class="cta-buttons">
+                <a href="#portfolio" class="cta-primary">Vezi Proiectele</a>
+                <a href="https://github.com/stefancimpan" target="_blank" class="cta-secondary">GitHub</a>
+            </div>
         </section>
+
+        <section id="skills" class="content-section">
+            <h2><span class="neon-text">//</span> Competențe Tehnice</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Core & Sisteme</h3>
+                    <p class="skill-tags">C++, OOP</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend & Scripting</h3>
+                    <p class="skill-tags">Python, Scripting Bash</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend & Tools</h3>
+                    <p class="skill-tags">HTML5, CSS3, JavaScript, Git/GitHub, VS Code</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="portfolio" class="content-section">
+            <h2><span class="neon-text">//</span> Proiecte Recente</h2>
+            <div class="projects-grid">
+                
+                <article class="project-card" data-aos="fade-up">
+                    <h3 class="neon-text">Performance CLI Tool</h3>
+                    <p>Un utilitar Command Line Interface dezvoltat în C++ pentru monitorizarea resurselor sistemului (CPU, Memorie) în timp real.</p>
+                    <p class="tech-used">Tehnologii: **C++17, STL, POSIX (Linux)**</p>
+                    <div class="project-links">
+                        <a href="https://github.com/stefancimpan/cli-tool" target="_blank" class="link-btn">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-aos="fade-up" data-aos-delay="150">
+                    <h3 class="neon-text">Coming soon...</h3>
+                    <p>Coming soon...</p>
+                    <p class="tech-used">Tehnologii: <strong>Coming soon...</strong></p>
+                   <!--<div class="project-links">  Acesta este comentat deoarece nu exista inca.
+                        <a href="https://cdn.prod.website-files.com/65ba70a5bb6f912baf0094a3/692588c50754ada9941bfd11_glenncatteeuw.com_404(1440).webp" target="_blank" class="link-btn">GitHub</a>
+                    </div>--> 
+                </article>
+
+                <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="neon-text">NASA Gateway Attacker</h3>
+                    <p>Utilitar de intruziune la nivel de kernel. Execută injecție directă de pachete pentru a valida reziliența sistemelor și a exploata vectorii de bandă.</p>
+                    <p class="tech-used">Tehnologii: <strong>C++, Rust, Protocol Analysis, Low-Level Sockets</strong></p>
+                    <div class="project-links">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="link-btn">GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact" class="content-section">
+            <h2><span class="neon-text">//</span> Contact</h2>
+            <p>Ești interesat de o colaborare? Trimite-mi un mesaj sau conectează-te cu mine pe rețelele de dezvoltatori.</p>
+            <div class="contact-links">
+                <a href="mailto:stefancimpan@icloud.com" class="link-btn neon-link">Email</a>
+                <a href="https://www.linkedin.com/in/cimpanstefan/" target="_blank" class="link-btn neon-link">LinkedIn</a>
+                <a href="https://github.com/stefancimpan" target="_blank" class="link-btn neon-link">GitHub</a>
+            </div>
+        </section>
+
     </main>
+
     <footer>
-        <p>&copy; 2025 Stefan Cimpan. All rights reserved.</p>
+        <p>&copy; 2025 Stefan Cîmpan</p>
     </footer>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
